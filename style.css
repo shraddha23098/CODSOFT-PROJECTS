@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #ce2222;
+    color: #28bcc6;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+section {
+    background: rgb(243, 217, 183);
+    margin-bottom: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 9px rgba(14, 206, 23, 0.925);
+}
+
+nav a {
+  margin-left: 1.5rem;
+  font-weight: 600;
+  color: #d65db8;
+  padding: 4px 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background: linear-gradient(to right, #d946ef, #7c3aed);
+  color: #fff;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* Header Styling */
+header {
+    background: #f2f55cd7;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+nav h1 {
+    color: #fff;
+}
+
+/* About Section */
+.profile-pic {
+    width: 250px;
+    height: auto;
+    border-radius: 20%;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+}
+
+#skills li {
+    background: #e4e4e4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+/* Projects Section */
+.project-card {
+    border: 1px solid #485de5;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Resume Section & Button */
+.btn {
+    display: inline-block;
+    background: #1bcbdb;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ff6ec4;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.9rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #c9cf70;
+  color: #f0e9ff;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #da4834;
+}
+
+.contact button {
+  background:  #1bcbdb;
+  color: white;
+  padding: 0.9rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.contact button:hover {
+  background: #ff6ec4;
+  transform: scale(1.04);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #dc2763;
+    color: #fff;
+    font-size: 0.8em;
+}
+
