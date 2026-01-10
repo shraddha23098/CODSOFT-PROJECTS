@@ -1,151 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #042625;
-      font-family: Arial, sans-serif;
-    }
-
-    .calculator {
-      background: #71271d;
-      padding: 20px;
-      border-radius: 20px;
-      width: 360px;
-    }
-
-    #display {
-      width: 100%;
-      height: 50px;
-      font-size: 22px;
-      text-align: right;
-      padding: 5px 10px;
-      margin-bottom: 10px;
-    }
-
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-
-    button {
-      padding: 15px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #be2d87;
-    }
-
-    .equal {
-      background: rgb(29, 113, 209);
-      grid-column: span 2;
-    }
-
-    .zero {
-      grid-column: span 2;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stratton - Web Agency</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <div class="calculator">
-    <input type="text" id="display" placeholder="0">
-
-    <div class="buttons">
-      <button onclick="clearAll()">C</button>
-      <button onclick="setOperator('/')">÷</button>
-      <button onclick="setOperator('*')">×</button>
-      <button onclick="setOperator('-')">−</button>
-
-      <button onclick="addNumber('7')">7</button>
-      <button onclick="addNumber('8')">8</button>
-      <button onclick="addNumber('9')">9</button>
-      <button onclick="setOperator('+')">+</button>
-
-      <button onclick="addNumber('4')">4</button>
-      <button onclick="addNumber('5')">5</button>
-      <button onclick="addNumber('6')">6</button>
-      <button onclick="addNumber('00')">00</button>
-
-      <button onclick="calculate()" class="equal">=</button>
-
-      <button onclick="addNumber('1')">1</button>
-      <button onclick="addNumber('2')">2</button>
-      <button onclick="addNumber('3')">3</button>
-      <button onclick="addNumber('.')">.</button>
-
-      <button onclick="addNumber('0')" class="zero">0</button>
+  <header>
+    <div class="container">
+      <h1 class="logo">Stratton</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#work">Works</a>
+        <a href="#services">Services</a>
+        <a href="experiences">Experiences</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <script>
-    let first = "";
-    let second = "";
-    let operator = "";
-    let isSecond = false;
+  <section class="hero">
+    <div class="container hero-flex">
+      <div class="hero-text">
+        <h2>Transform Your Business Vision Into Reality</h2>
+        <p>Expert consulting services that help ambitious leaders navigate complexity, unlock growth opportunities, and build sustainable competitive advantages.</p>
+        <a href="#contact" class="btn">Start Your Journey &#8594</a>
+      </div>
+      <div class="hero-img">
+        <img
+          src="https://t4.ftcdn.net/jpg/03/00/14/39/360_F_300143961_8kJTPiTbWallCIBxO0GQzoxgwE9cIRGG.jpg"
+          alt="Hero Illustration" />
+      </div>
+    </div>
+    </section>
 
-    const display = document.getElementById("display");
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="service-grid">
+          <div class="service">
+            <h3>Web Development</h3>
+            <p>Responsive and SEO-optimized websites tailored to your business.</p>
+          </div>
+          <div class="service">
+            <h3>Strategic Planning</h3>
+            <p>Develop comprehensive strategies that align your organization's goals with market opportunities and competitive realities.</p>
+          </div>
+          <div class="service">
+            <h3>Branding</h3>
+            <p>Complete brand identity solutions including logos, colors, and visuals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    function addNumber(num) {
-      if (!isSecond) {
-        first += num;
-        display.value = first;
-      } else {
-        second += num;
-        display.value = second;
-      }
-    }
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <p>“Stratton Consulting transformed our approach to market expansion. Their strategic insights helped us achieve 40% revenue growth in just 18 months."</p>
+            <h4>– Arjun Mehta, CEO of NextSoft</h4>
+          </div>
+          <div class="testimonial">
+            <p>“The leadership development program exceeded all expectations. Our executive team is now more aligned and effective than ever before."</p>
+            <h4>– Riya Shah, Founder of EduGenius</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    function setOperator(op) {
-      if (first === "") return;
-      operator = op;
-      isSecond = true;
-    }
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
 
-    function calculate() {
-      let n1 = Number(first);
-      let n2 = Number(second);
-      let result = 0;
-
-      if (operator === "+") result = n1 + n2;
-      else if (operator === "-") result = n1 - n2;
-      else if (operator === "*") result = n1 * n2;
-      else if (operator === "/") result = n1 / n2;
-
-      display.value = result;
-
-      first = result.toString();
-      second = "";
-      operator = "";
-      isSecond = false;
-    }
-
-    function clearAll() {
-      first = "";
-      second = "";
-      operator = "";
-      isSecond = false;
-      display.value = "";
-    }
-  </script>
-
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Stratton Consulting. All rights reserved.</p>
+      </div>
+    </footer>
 </body>
+
 </html>
